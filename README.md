@@ -1,1 +1,1 @@
-# BooxiClientBundle
+# IDCI Booxi Client Bundle
