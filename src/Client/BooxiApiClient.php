@@ -12,17 +12,15 @@ use Symfony\Component\Serializer\SerializerInterface;
 class BooxiApiClient
 {
     private LoggerInterface $logger;
-    private ?AdapterInterface $cache;
+    private ?AdapterInterface $cache = null;
     private string $partnerKey;
     private ?ClientInterface $httpClient = null;
 
     public function __construct(
         LoggerInterface $logger,
-        ?AdapterInterface $cache,
         string $partnerKey,
     ) {
         $this->logger = $logger;
-        $this->cache = $cache;
         $this->partnerKey = $partnerKey;
     }
 
