@@ -12,13 +12,13 @@ use Symfony\Component\Serializer\SerializerInterface;
 class BooxiApiClient
 {
     private LoggerInterface $logger;
-    private AdapterInterface $cache;
+    private ?AdapterInterface $cache;
     private string $partnerKey;
     private ?ClientInterface $httpClient = null;
 
     public function __construct(
         LoggerInterface $logger,
-        AdapterInterface $cache,
+        ?AdapterInterface $cache,
         string $partnerKey,
     ) {
         $this->logger = $logger;
@@ -31,6 +31,11 @@ class BooxiApiClient
         $this->httpClient = $httpClient;
     }
 
+    public function setCache(AdapterInterface $cache): void
+    {
+        $this->cache = $cache;
+    }
+
     public function getMerchant()
     {
         $response = $this->httpClient->request('GET', 'merchant/', [
@@ -38,8 +43,6 @@ class BooxiApiClient
                 'Booxi-PartnerKey' => $this->partnerKey,
             ],
         ]);
-
-        dd($response);
 
         return $response;
     }

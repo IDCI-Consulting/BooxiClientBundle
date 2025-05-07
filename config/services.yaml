@@ -3,5 +3,4 @@ services:
     IDCI\Bundle\BooxiClientBundle\Client\BooxiApiClient:
         arguments:
             $logger: '@logger'
-            $cache: '@cache'
             $partnerKey: '%idci_booxi_client.partner_key%'
