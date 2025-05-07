@@ -70,4 +70,4 @@ BOOXI_PARTNER_KEY=
 ###< idci/booxi-client-bundle ###
 ```
 
-To retrieve more informations about SAM API, go to [Booxi API](https://api.booxi.com/doc/booking.html) or [EU Booxi API](https://api.booxi.eu/doc/booking.html).
+To retrieve more informations about Booxi API, go to [Booxi API](https://api.booxi.com/doc/booking.html) or [EU Booxi API](https://api.booxi.eu/doc/booking.html).
