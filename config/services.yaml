@@ -1,6 +1,14 @@
 services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    IDCI\Bundle\BooxiClientBundle\:
+        resource: '../src/*'
+        exclude: '../../{Model}'
 
     IDCI\Bundle\BooxiClientBundle\Client\BooxiApiClient:
         arguments:
-            $logger: '@logger'
+            $apiKey: '%idci_booxi_client.api_key%'
             $partnerKey: '%idci_booxi_client.partner_key%'
