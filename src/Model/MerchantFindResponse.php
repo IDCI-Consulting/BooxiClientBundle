@@ -2,7 +2,7 @@
 
 namespace IDCI\Bundle\BooxiClientBundle\Model;
 
-class TimeSlotFindResponse
+class MerchantFindResponse
 {
     /**
      * @var array<Merchant>

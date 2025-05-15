@@ -8,7 +8,7 @@ class BookingPayment
     private ?string $paid = null;
     private ?string $onlinePaymentId = null;
     private ?string $onlinePaymentAmount = null;
-    private ?PaymentStatus $onlinePaymentStatus = null;
+    private ?OnlinePaymentStatus $onlinePaymentStatus = null;
 
     public function getTotal(): ?string
     {
