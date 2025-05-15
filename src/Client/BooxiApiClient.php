@@ -93,9 +93,8 @@ class BooxiApiClient
     }
 
     /**
-     * Availability. @see https://api.booxi.eu/doc/booking.html#/Availability
+     * Availability. @see https://api.booxi.eu/doc/booking.html#/Availability.
      */
-
     public function getGroupEvents(array $options = []): ?GroupEventCollection
     {
         $resolver = (new OptionsResolver())
@@ -258,9 +257,8 @@ class BooxiApiClient
     }
 
     /**
-     * Booking. @see https://api.booxi.eu/doc/booking.html#/Booking
+     * Booking. @see https://api.booxi.eu/doc/booking.html#/Booking.
      */
-
     public function getBookings(array $options = []): ?BookingFindResponse
     {
         $resolver = (new OptionsResolver())
@@ -427,9 +425,8 @@ class BooxiApiClient
     }
 
     /**
-     * Book now. @see https://api.booxi.eu/doc/booking.html#/Book%20Now
+     * Book now. @see https://api.booxi.eu/doc/booking.html#/Book%20Now.
      */
-
     public function getBookNowMerchant(array $options = []): ?BookNowMerchant
     {
         $resolver = (new OptionsResolver())
@@ -571,9 +568,8 @@ class BooxiApiClient
     }
 
     /**
-     * Calendar. @see https://api.booxi.eu/doc/booking.html#/Calendar
+     * Calendar. @see https://api.booxi.eu/doc/booking.html#/Calendar.
      */
-
     public function getCalendar(array $options = []): ?CalendarEventListResponse
     {
         $resolver = (new OptionsResolver())
@@ -745,9 +741,8 @@ class BooxiApiClient
     }
 
     /**
-     * Client. @see https://api.booxi.eu/doc/booking.html#/Client
+     * Client. @see https://api.booxi.eu/doc/booking.html#/Client.
      */
-
     public function getClients(array $options = []): ?ClientFindResponse
     {
         $resolver = (new OptionsResolver())
@@ -910,9 +905,8 @@ class BooxiApiClient
     }
 
     /**
-     * Merchant. @see https://api.booxi.eu/doc/booking.html#/Merchant
+     * Merchant. @see https://api.booxi.eu/doc/booking.html#/Merchant.
      */
-
     public function getMerchants(array $options = []): ?MerchantCollection
     {
         $resolver = (new OptionsResolver())
@@ -1029,9 +1023,8 @@ class BooxiApiClient
     }
 
     /**
-     * Schedule. @see https://api.booxi.eu/doc/booking.html#/Schedule
+     * Schedule. @see https://api.booxi.eu/doc/booking.html#/Schedule.
      */
-
     public function getMerchantSchedules(int $merchantId, array $options = []): ?ScheduleListResponse
     {
         $resolver = (new OptionsResolver())
@@ -1251,9 +1244,8 @@ class BooxiApiClient
     }
 
     /**
-     * Service. @see https://api.booxi.eu/doc/booking.html#/Service
+     * Service. @see https://api.booxi.eu/doc/booking.html#/Service.
      */
-
     public function getServices(array $options = []): ?ServiceListResponse
     {
         $resolver = (new OptionsResolver())
@@ -1386,10 +1378,10 @@ class BooxiApiClient
                 ],
                 'multipart' => [
                     [
-                        'name'     => 'image',
-                        'contents' => $fileContents
+                        'name' => 'image',
+                        'contents' => $fileContents,
                     ],
-                ]
+                ],
             ]);
 
             return $this->serializer->deserialize((string) $response->getBody(), Service::class, 'json');
@@ -1483,9 +1475,8 @@ class BooxiApiClient
     }
 
     /**
-     * Service Category. @see https://api.booxi.eu/doc/booking.html#/Service%20Category
+     * Service Category. @see https://api.booxi.eu/doc/booking.html#/Service%20Category.
      */
-
     public function getServiceCategories(array $options = []): ?ServiceCategoryListResponse
     {
         $resolver = (new OptionsResolver())
@@ -1606,10 +1597,10 @@ class BooxiApiClient
                 ],
                 'multipart' => [
                     [
-                        'name'     => 'image',
-                        'contents' => $fileContents
+                        'name' => 'image',
+                        'contents' => $fileContents,
                     ],
-                ]
+                ],
             ]);
 
             return $this->serializer->deserialize((string) $response->getBody(), ServiceCategory::class, 'json');
@@ -1703,9 +1694,8 @@ class BooxiApiClient
     }
 
     /**
-     * Staff. @see https://api.booxi.eu/doc/booking.html#/Staff
+     * Staff. @see https://api.booxi.eu/doc/booking.html#/Staff.
      */
-
     public function getStaffs(array $options = []): ?StaffListResponse
     {
         $resolver = (new OptionsResolver())
@@ -1881,10 +1871,10 @@ class BooxiApiClient
                 ],
                 'multipart' => [
                     [
-                        'name'     => 'image',
-                        'contents' => $fileContents
+                        'name' => 'image',
+                        'contents' => $fileContents,
                     ],
-                ]
+                ],
             ]);
 
             return $this->serializer->deserialize((string) $response->getBody(), Staff::class, 'json');
@@ -1896,9 +1886,8 @@ class BooxiApiClient
     }
 
     /**
-     * User Access. @see https://api.booxi.eu/doc/booking.html#/User%20Access
+     * User Access. @see https://api.booxi.eu/doc/booking.html#/User%20Access.
      */
-
     public function getStaffPasswordRecovery(int $staffId, int $recoveryId): ?PasswordRecovery
     {
         try {
@@ -1984,9 +1973,8 @@ class BooxiApiClient
     }
 
     /**
-     * Utils
+     * Utils.
      */
-
     private function logRequestException(RequestException $e, array $options = []): void
     {
         $this->logger->error(

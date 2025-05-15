@@ -2,7 +2,7 @@
 
 namespace IDCI\Bundle\BooxiClientBundle\Model;
 
-enum PasswordRecoveryCodeState  : string
+enum PasswordRecoveryCodeState: string
 {
     case Valid = 'Valid';
     case Used = 'Used';
