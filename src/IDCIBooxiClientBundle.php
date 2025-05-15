@@ -19,8 +19,8 @@ class IDCIBooxiClientBundle extends AbstractBundle
             ->children()
                 ->scalarNode('guzzle_http_client_service_alias')->isRequired()->cannotBeEmpty()->end()
                 ->scalarNode('cache_pool_service_alias')->defaultValue(null)->cannotBeEmpty()->end()
-                ->scalarNode('api_key')->end()
-                ->scalarNode('partner_key')->end()
+                ->scalarNode('api_key')->defaultValue(null)->end()
+                ->scalarNode('partner_key')->defaultValue(null)->end()
             ->end()
         ;
     }
