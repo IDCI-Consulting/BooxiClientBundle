@@ -2,7 +2,7 @@
 
 namespace IDCI\Bundle\BooxiClientBundle\Model;
 
-class ServiceCategory
+class BookNowServiceCategory
 {
     private ?int $id = null;
     private ?string $name = null;
