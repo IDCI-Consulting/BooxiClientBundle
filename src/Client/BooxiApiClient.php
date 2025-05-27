@@ -92,6 +92,11 @@ class BooxiApiClient
         $this->cache = $cache;
     }
 
+    public function setLogger(LoggerInterface $logger): void
+    {
+        $this->logger = $logger;
+    }
+
     /**
      * Availability. @see https://api.booxi.eu/doc/booking.html#/Availability.
      */
